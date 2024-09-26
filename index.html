@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            <!-- HERO SECTION -->
+            <div id="hero">
+                <h1 id="title">Visit Isfahan</h1>
+                <h3 id="subtitle">Enjoy culture and sports in this vibrant district close to the center of Isfahan.</h3>
+            </div>
+            
+            <!-- ACTIVITIES SECTION -->
+             <div>
+                <h3>Top three activities to do at Isfahan</h3>
+                <div class="container">
+        
+                    <div class="item">
+                       <a href="https://www.safarbazi.com/mag/fadak-garden-in-isfahan/"><img src="./images/Isfahan.jpg" alt="A park with grass and tree" class="imgcircle" ></a> 
+                        <h4>Attend a show or a concert</h4>
+                        <p>The Isfahan Theatre is a great place to spend your night out.</p>
+                    </div>
+                    <div class="item"> 
+                       <a href="https://esfahanticket.ir/"><img src="images/theatre.jpg" alt="A theatre house"class="imgcircle" ></a>
+                        <h4>Go for a piknic in the local park</h4>
+                        <p>The Isfahan Park is perfect for piknic, getting some tan, or just chilling out.</p>
+                    </div>
+                    <div class="item">
+                        <a href="https://en.wikipedia.org/wiki/Naghsh-e_Jahan_Stadium"><img src="images/sports.jpg" alt="sports balls" class="imgcircle" ></a>
+                        <h4>Play sports at the Lilleborg field</h4>
+                        <p>Play volleyball, football, basket ball or lift some weights.</pp>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- GUIDE SECTION -->
+             <div class="card">
+                <div class="item">
+                    <h3>Your guide</h3>
+                    <p>"I have lived at IRAN for over 30 years, so I can show you all of its best parts and hidden secrets."</p>
+                    <h4>Shirin panahian</h4> 
+                    <a href="mailto:sh.panahian@gmail.com">sh.panahian@gmail.com</a> 
+                </div>
+                <img  id="avatar" src="images/per.jpg" alt="my picture" >
+               
+             </div>
+            
+        </div>
+        <script>
+             const images = [
+                 'images/Isfahan.jpg',
+                 'images/isfahan2.jpg',
+                 'images/isfahan3.jpg'
+            ];
+            let currentIndex = 0;
+
+            const hero = document.getElementById('hero');
+
+            function updateBackground() {
+            hero.style.backgroundImage = `url(${images[currentIndex]})`;
+            }
+
+// Initial background
+            updateBackground();
+
+// Change background every 3 seconds
+            setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateBackground();
+               }, 3000);
+        </script>
+    </body>
+</html>
